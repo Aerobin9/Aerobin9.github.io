@@ -3,45 +3,489 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md Abir Hassan Robin | Academic Website</title>
+  <title>Md Abir Hassan Robin | Aerospace Researcher</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f7f9fc;
+      color: #1f2937;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #071a33;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #06152b, #123b6d);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 750px;
+      margin-bottom: 25px;
+      color: #dbeafe;
+    }
+
+    .tagline {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 5px 8px 5px 0;
+      background: white;
+      color: #123b6d;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    section {
+      padding: 75px 10%;
+    }
+
+    section h2 {
+      font-size: 34px;
+      color: #0b2d55;
+      margin-bottom: 25px;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about p {
+      max-width: 950px;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .research-grid,
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .card h3 {
+      color: #0b2d55;
+      margin-bottom: 10px;
+    }
+
+    .publication {
+      background: white;
+      padding: 25px;
+      border-left: 5px solid #123b6d;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+
+    .publication h3 {
+      margin-bottom: 8px;
+    }
+
+    .publication p {
+      margin-bottom: 6px;
+    }
+
+    .timeline-item {
+      background: white;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    }
+
+    .timeline-item h3 {
+      color: #0b2d55;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #071a33;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #041020;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav .links {
+        margin-top: 12px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>Md Abir Hassan Robin</h1>
+  <nav>
+    <div class="logo">AEROBIN</div>
 
-  <p>
-    Master's Researcher in Flight Vehicle Design<br>
-    Beihang University
-  </p>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <h2>Research Interests</h2>
 
-  <p>
-    Aircraft Design | Aerodynamics | Computational Fluid Dynamics |
-    Data-Driven Aerodynamics | AI for Aerospace Engineering
-  </p>
+  <section class="hero">
+    <div class="hero-content">
 
-  <h2>About Me</h2>
+      <h1>Md Abir Hassan Robin</h1>
 
-  <p>
-    I am a master's researcher in Flight Vehicle Design at Beihang University.
-    My research interests focus on aircraft design, aerodynamics,
-    computational fluid dynamics, and data-driven methods for aerospace engineering.
-  </p>
+      <h2>
+        Flight Vehicle Design Researcher | Aerodynamics | CFD | Aircraft Design
+      </h2>
 
-  <h2>Research & Publications</h2>
+      <p>
+        Master's researcher at Beihang University working at the intersection of
+        aircraft design, computational aerodynamics, data-driven modeling, and
+        intelligent aerospace engineering.
+      </p>
 
-  <p>
-    Research publications and projects will be added here.
-  </p>
+      <div class="tagline">
+        Designing better aircraft through physics, computation, and data.
+      </div>
 
-  <h2>Contact</h2>
+      <a class="button" href="#publications">View Research</a>
+      <a class="button secondary" href="#contact">Contact Me</a>
 
-  <p>
-    Beihang University<br>
-    Beijing, China
-  </p>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+      I am Md Abir Hassan Robin, currently pursuing a Master's degree in Flight
+      Vehicle Design at Beihang University. My academic and research interests
+      focus on the design and analysis of advanced flight vehicles, with particular
+      emphasis on aerodynamics, computational fluid dynamics, aircraft overall
+      design, and data-driven engineering methods.
+    </p>
+
+    <p>
+      My long-term research goal is to contribute to the development of next-generation
+      aircraft through the integration of aerodynamic analysis, multidisciplinary
+      design, computational simulation, and artificial intelligence.
+    </p>
+
+  </section>
+
+
+  <section id="research">
+
+    <h2>Research Interests</h2>
+
+    <div class="research-grid">
+
+      <div class="card">
+        <h3>Aircraft Design</h3>
+        <p>
+          Conceptual and overall aircraft design, multidisciplinary configuration
+          development, and performance-oriented design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Aerodynamics</h3>
+        <p>
+          Transonic aerodynamics, wing-flow analysis, aerodynamic performance,
+          and computational investigation of flight vehicles.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Computational Fluid Dynamics</h3>
+        <p>
+          CFD simulation, numerical modeling, grid convergence, flow-field analysis,
+          and aerodynamic prediction.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Data-Driven Aerodynamics</h3>
+        <p>
+          Surrogate modeling, Gaussian Process Regression, machine learning, and
+          efficient prediction methods for aerospace applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AI for Aerospace Engineering</h3>
+        <p>
+          Integration of artificial intelligence with simulation, optimization,
+          digital engineering, and next-generation aircraft development.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Advanced Flight Vehicles</h3>
+        <p>
+          Emerging aircraft configurations, VTOL concepts, intelligent aviation
+          systems, and future air mobility.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="publications">
+
+    <h2>Selected Publications</h2>
+
+    <div class="publication">
+
+      <h3>
+        Mechanism of interfacial crack initiation in 3D TBCs and the influence
+        of substrate curvature on failure behavior
+      </h3>
+
+      <p>
+        Journal of the American Ceramic Society, 2025
+      </p>
+
+      <p>
+        Research involving structural integrity and failure behavior of thermal
+        barrier coating systems.
+      </p>
+
+    </div>
+
+
+    <div class="publication">
+
+      <h3>
+        Aerodynamic Surrogate Modeling of the ONERA M6 Wing Using CFD and
+        Gaussian Process Regression
+      </h3>
+
+      <p>
+        Conference Research
+      </p>
+
+      <p>
+        CFD-based transonic aerodynamic analysis combined with Gaussian Process
+        Regression for efficient aerodynamic surrogate modeling.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section id="experience">
+
+    <h2>Academic & Professional Experience</h2>
+
+    <div class="timeline-item">
+
+      <h3>Beihang University</h3>
+      <p>
+        Master's Researcher — Flight Vehicle Design
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <h3>Beihang University</h3>
+      <p>
+        Teaching Assistant — Numerical Analysis in Engineering
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <h3>US-Bangla Airlines</h3>
+      <p>
+        Executive — Continuing Airworthiness Management Organization
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <h3>Teaching Experience</h3>
+      <p>
+        Former lecturer with academic teaching experience in engineering-related
+        education.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section id="awards">
+
+    <h2>Awards & Academic Activities</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Best Oral Presentation</h3>
+        <p>Graduate Student Forum, Beihang University</p>
+      </div>
+
+      <div class="card">
+        <h3>Distinguished Foreign Student Scholarship</h3>
+        <p>Outstanding Behavior — Second Prize</p>
+      </div>
+
+      <div class="card">
+        <h3>Best Oral Presentation</h3>
+        <p>AAME 2026 Conference</p>
+      </div>
+
+      <div class="card">
+        <h3>Student Leadership</h3>
+        <p>
+          Active involvement in international student organizations, robotics,
+          academic innovation, and university activities.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="contact" id="contact">
+
+    <h2>Connect With Me</h2>
+
+    <p>
+      Beihang University · Beijing, China
+    </p>
+
+    <p style="margin-top:20px;">
+      Google Scholar |
+      LinkedIn |
+      ORCID |
+      ResearchGate |
+      GitHub
+    </p>
+
+    <p style="margin-top:20px;">
+      Academic collaborations and PhD research opportunities are welcome.
+    </p>
+
+  </section>
+
+
+  <footer>
+    © 2026 Md Abir Hassan Robin | AEROBIN
+  </footer>
 
 </body>
 </html>
